@@ -4,15 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am a senior algorithm engineer at [City Brain Lab of Damo Academy](https://damo.alibaba.com/labs/city-brain), [Alibaba Group](https://www.alibabagroup.com/en-US). Before that, I received my Ph.D. degree at the [College of Computer Science and Technology](http://www.en.cs.zju.edu.cn), [Zhejiang University (浙江大学)](https://www.zju.edu.cn/english) and also the [State Key Laboratory of CAD & CG](http://www.cad.zju.edu.cn/english.html). I was under the supervision of [Prof. Xiaofei He](http://www.cad.zju.edu.cn/home/xiaofeihe) and [Prof. Deng Cai](http://www.cad.zju.edu.cn/home/dengcai). 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+You can find more about me on my [home page](https://sites.google.com/view/xinguo).
 
 
-[jekyll-organization]: https://github.com/jekyll
