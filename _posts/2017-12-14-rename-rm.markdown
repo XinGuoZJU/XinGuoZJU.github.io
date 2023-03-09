@@ -1,0 +1,92 @@
+---
+layout: post
+title: 防止rm误删（mac和ubuntu通用）
+---
+
+欢迎大家访问我的主页：https://sites.google.com/view/xinguo 或者 http://xinguo1993.coding.me
+
+以及我的Github: https://github.com/XinGuoZJU
+
+本质上是重写rm命令，将文件移到废纸篓，在废纸篓里可以直接永久删除，或者用/bin/rm命令永久删除
+
+对于 ubuntu
+vim .bashrc
+添加：
+alias rm=trash
+
+trash()
+
+{
+
+  files=()
+
+  timestamp=$(date +%s)
+
+  for file in "$@"
+
+  do
+
+    if [[ ${file:0:1} != "-" ]]
+
+    then
+
+      files=("${files[@]}" "${file}")
+
+    fi
+
+  done
+
+
+
+  mkdir -p ~/.local/share/Trash/files/$timestamp
+
+  #echo `date -r $timestamp '+%x %X'` " $timestamp: rm $* --> mv "${files[@]}" --> source: `pwd`" >> ~/.trash/.trash.log
+
+  mv "${files[@]}" ~/.local/share/Trash/files/$timestamp
+
+}
+
+
+对于 mac
+vim .bash_profile
+添加：
+alias rm=trash
+
+trash()
+
+{
+
+    files=()
+
+    timestamp=$(date +%s)
+
+    for file in "$@"
+
+    do
+
+        if [[ ${file:0:1} != "-" ]]
+
+        then
+
+            files=("${files[@]}" "${file}")
+
+        fi
+
+    done
+
+
+
+    mkdir -p ~/.trash/$timestamp
+
+    echo `date -r $timestamp '+%x %X'` " $timestamp: rm $* --> mv "${files[@]}" --> source: `pwd`" >> ~/.trash/.trash.log
+
+    #ls -l  "${files[@]}"
+
+    mv "${files[@]}" ~/.trash/$timestamp
+
+}
+
+
+
+
+
