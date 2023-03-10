@@ -3,13 +3,12 @@ layout: post
 title: Install opencv open3d in docker
 ---
 
-
 基础镜像：
     docker pull pytorch/pytorch:1.6.0-cuda10.1-cudnn7-devel
 系统版本：ubuntu 18.04.3 LTS
 
 
-1. ## 换源：
+1. 换源：
 1.1 # apt
     # https://zhuanlan.zhihu.com/p/142014944
     # https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11iEnHXx
@@ -25,7 +24,7 @@ title: Install opencv open3d in docker
     # https://www.cnblogs.com/vipstone/p/9038023.html
 
 
-2. ## 安装opencv
+2. 安装opencv
     # https://blog.csdn.net/hjl240/article/details/51520003 
     # https://blog.csdn.net/wandugu/article/details/117335867
     # 安装教程：https://www.jianshu.com/p/59608e83becb
@@ -56,5 +55,6 @@ title: Install opencv open3d in docker
     pip install opencv-python
 
 
-2. ## 安装open3d
+3. 安装open3d
     pip install open3d
+
