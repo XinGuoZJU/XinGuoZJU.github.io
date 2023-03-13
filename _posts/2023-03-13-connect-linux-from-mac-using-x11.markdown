@@ -33,3 +33,7 @@ xclock
 docker run -it -e DISPLAY -v $HOME/.Xauthority:/root/.Xauthority --name ${containerName} ${imageName} bash
 注意：$HOME/.Xauthority是个文件，如果没有的话说明x11没有正确配置
 
+# 如果docker是安装在mac上，也就是说主机和服务器都是mac，则用下面的命令执行（区别是指定了IP）
+IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+docker run -it -e DISPLAY=$IP:0 -v ~/.Xauthority:/root/.Xauthority --name ${containerName} ${imageName} bash
+
