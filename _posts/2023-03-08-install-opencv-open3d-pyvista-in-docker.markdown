@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Install opencv open3d in docker
+title: Install opencv open3d pyvista in docker
 ---
 
 基础镜像:
